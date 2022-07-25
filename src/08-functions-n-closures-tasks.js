@@ -24,7 +24,7 @@
  *
  */
 function getComposition(f, g) {
-  return function (...arg) {
+  return (...arg) => {
     const val = g(...arg);
     return f(val);
   };
@@ -48,9 +48,7 @@ function getComposition(f, g) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (...arg) {
-    return arg[0] ** exponent;
-  };
+  return (...arg) => arg[0] ** exponent;
 }
 
 
